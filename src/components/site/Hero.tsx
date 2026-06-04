@@ -34,10 +34,11 @@ export function Hero() {
 
         <Reveal delay={120}>
           <h1 className="font-display mt-8 text-4xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight max-w-4xl">
-            Markalar için{" "}
-            <span className="italic font-normal text-accent">sade</span> ve{" "}
-            <span className="italic font-normal text-accent">işlevsel</span>{" "}
-            kimlikler tasarlıyorum.
+            Markaları{" "}
+            <span className="italic font-normal text-accent">dijital dünyaya</span>{" "}
+            taşıyan,{" "}
+            <span className="italic font-normal text-accent">modern</span>{" "}
+            websiteleri tasarlıyorum.
           </h1>
         </Reveal>
 
