@@ -13,13 +13,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Burak Emre Aşcı — markalar için sade ve işlevsel kimlikler tasarlayan bağımsız tasarımcı. Sakarya / İstanbul.",
+          "Burak Emre Aşcı — markaları dijital dünyaya taşıyan, modern websiteleri tasarlayan bağımsız tasarımcı. Sakarya / İstanbul.",
       },
       { property: "og:title", content: "Burak Emre Aşcı — Tasarımcı" },
       {
         property: "og:description",
         content:
-          "Markalar için sade ve işlevsel kimlikler tasarlıyorum. Portföy ve iletişim.",
+          "Markaları dijital dünyaya taşıyan, modern websiteleri tasarlıyorum. Portföy ve iletişim.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
