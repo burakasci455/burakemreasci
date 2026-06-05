@@ -18,26 +18,42 @@ const atelierShots = [
 type Project = {
   num: string;
   title: string;
-  category: string;
+  sector: string;
   year: string;
   cover?: string;
   shots?: { src: string; label: string }[];
-  description?: string;
+  problem?: string;
+  work?: string;
+  impact?: string;
 };
 
 const projects: Project[] = [
   {
     num: "01",
     title: "Atelier Meşe",
-    category: "İç mimarlık · Web tasarım",
+    sector: "İç mimarlık · Mobilya atölyesi",
     year: "2026",
     cover: heroImg.url,
     shots: atelierShots,
-    description:
-      "İç mimarlık ve özel üretim mobilya atölyesi Atelier Meşe için sade, sıcak ve doğal tonlara dayanan bir kurumsal site tasarımı.",
+    problem:
+      "Atölyenin işleri güçlü ama internette ciddi bir vitrini yoktu. Potansiyel müşteri markayı aradığında bulamıyor, bulduğunda da güven sinyali alamıyordu.",
+    work:
+      "Sıcak ve doğal tonlara dayanan kurumsal bir site kurguladım. Ana sayfa, hakkımızda, seçilmiş işler, portföy ve atölye sayfalarını içerik ve mesaj akışına göre tasarladım. Temel SEO ve görünürlük altyapısı baştan kuruldu.",
+    impact:
+      "Marka artık aratıldığında bulunabilir, sergilenecek bir vitrine sahip ve potansiyel müşteriye ilk dakikada güven veren bir dijital ev sahibi.",
   },
-  { num: "02", title: "", category: "Yakında", year: "" },
-  { num: "03", title: "", category: "Yakında", year: "" },
+  {
+    num: "02",
+    title: "",
+    sector: "Yakında",
+    year: "",
+  },
+  {
+    num: "03",
+    title: "",
+    sector: "Yakında",
+    year: "",
+  },
 ];
 
 export function Projects() {
@@ -52,9 +68,7 @@ export function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 mb-16 md:mb-24">
           <Reveal className="md:col-span-4">
             <div className="flex items-baseline gap-4">
-              <span className="font-display text-xs tracking-[0.3em] text-accent">
-                02
-              </span>
+              <span className="font-display text-xs tracking-[0.3em] text-accent">03</span>
               <h2 className="font-display text-sm tracking-[0.3em] uppercase text-muted-foreground">
                 Projeler
               </h2>
@@ -62,10 +76,11 @@ export function Projects() {
           </Reveal>
           <Reveal delay={120} className="md:col-span-8">
             <p className="font-display text-2xl md:text-3xl leading-snug tracking-tight text-foreground/90 max-w-2xl">
-              Seçilmiş işler. Bir projeye basarak detayları görebilirsiniz.
+              Seçilmiş işler. Her proje; sorun, kurulan yapı ve hedeflenen
+              etki üzerinden anlatılıyor.
             </p>
             <p className="mt-4 font-body text-sm text-muted-foreground/80">
-              Yeni projeler süreciyle birlikte tek tek eklenecek.
+              Bir karta basarak detayları görebilirsin.
             </p>
           </Reveal>
         </div>
@@ -91,10 +106,7 @@ export function Projects() {
                       className="absolute inset-0 h-full w-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-700"
                     />
                   )}
-                  <div
-                    aria-hidden
-                    className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent"
-                  />
+                  <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent" />
                   <div
                     aria-hidden
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
@@ -115,9 +127,12 @@ export function Projects() {
                       <p className="mt-3 font-display text-2xl tracking-tight text-foreground">
                         {p.title || "—"}
                       </p>
+                      <p className="mt-1 font-body text-xs text-muted-foreground">
+                        {p.sector}
+                      </p>
                       {isLive && (
-                        <p className="mt-1 font-body text-xs text-muted-foreground">
-                          {p.category}
+                        <p className="mt-3 font-body text-[11px] tracking-[0.2em] uppercase text-accent/80">
+                          Case study →
                         </p>
                       )}
                     </div>
@@ -145,15 +160,34 @@ export function Projects() {
                 {active.title}
               </DialogTitle>
               <p className="mt-2 font-body text-sm text-muted-foreground">
-                {active.category}
+                {active.sector}
               </p>
-              {active.description && (
-                <DialogDescription className="mt-6 font-body text-base md:text-lg text-foreground/80 max-w-3xl leading-relaxed">
-                  {active.description}
-                </DialogDescription>
-              )}
 
-              <div className="mt-10 grid grid-cols-1 gap-5">
+              <DialogDescription className="sr-only">
+                {active.title} case study
+              </DialogDescription>
+
+              <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                {[
+                  { label: "Sorun", body: active.problem },
+                  { label: "Ne yaptım", body: active.work },
+                  { label: "Hedeflenen etki", body: active.impact },
+                ].map(
+                  (b) =>
+                    b.body && (
+                      <div key={b.label} className="border-t border-border/50 pt-5">
+                        <p className="font-display text-[11px] tracking-[0.3em] uppercase text-accent">
+                          {b.label}
+                        </p>
+                        <p className="mt-3 font-body text-sm md:text-base text-foreground/85 leading-relaxed">
+                          {b.body}
+                        </p>
+                      </div>
+                    ),
+                )}
+              </div>
+
+              <div className="mt-12 grid grid-cols-1 gap-5">
                 {active.shots?.map((s) => (
                   <figure
                     key={s.src}
