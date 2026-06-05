@@ -1,10 +1,11 @@
 import { Reveal } from "./Reveal";
 
 const trustItems = [
-  "Website kurulumu",
+  "Web sitesi",
   "Temel SEO",
   "Search Console",
   "Analytics",
+  "Mobil uyum",
   "Yerel görünürlük",
 ];
 
@@ -41,18 +42,18 @@ export function Hero() {
 
         <Reveal delay={120}>
           <h1 className="font-display mt-8 text-4xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight max-w-4xl">
-            Sadece güzel bir site değil —{" "}
-            <span className="italic font-normal text-accent">bulunan</span>,{" "}
-            <span className="italic font-normal text-accent">ölçülen</span>,
-            müşteri getiren bir site.
+            Markanı dijitalde{" "}
+            <span className="italic font-normal text-accent">görünür</span> ve{" "}
+            <span className="italic font-normal text-accent">güvenilir</span>{" "}
+            kılan dijital altyapı.
           </h1>
         </Reveal>
 
         <Reveal delay={240}>
           <p className="mt-8 max-w-2xl font-body text-base md:text-lg text-muted-foreground leading-relaxed">
-            Yerel markalara modern web sitesi, temel SEO ve Search Console
-            kurulumu yapıyorum. Amacım sadece tasarım değil; bulunurluk ve
-            güven inşa eden dijital altyapı.
+            Yerel markalar için modern web sitesi, temel SEO ve ölçümleme
+            kurulumu. Sadece güzel görünen değil; doğru kişiye ulaşan ve güven
+            inşa eden bir altyapı kuruyorum.
           </p>
         </Reveal>
 

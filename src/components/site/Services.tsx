@@ -1,31 +1,26 @@
 import { Reveal } from "./Reveal";
-import { Globe, Search, BarChart3, MapPin, MessageSquare } from "lucide-react";
+import { Globe, Search, BarChart3, MessageSquare } from "lucide-react";
 
 const services = [
   {
     icon: Globe,
-    title: "Kurumsal web sitesi kurulumu",
-    desc: "Markanın ihtiyacına göre sade, hızlı ve mobil uyumlu modern bir site. Tasarımdan yayına tek elden.",
+    title: "Modern web sitesi kurulumu",
+    desc: "Markanın ihtiyacına göre sade, hızlı ve mobil uyumlu bir site. Tasarımdan yayına kadar tek elden teslim.",
   },
   {
     icon: Search,
-    title: "Temel SEO kurulumu",
-    desc: "Title, meta, başlık hiyerarşisi, sitemap, robots ve schema. Google'ın siteyi doğru anlaması için temel altyapı.",
+    title: "Temel SEO altyapısı",
+    desc: "Başlık hiyerarşisi, meta etiketler, sitemap ve schema. Google'ın siteyi doğru anlaması için gereken temel yapı.",
   },
   {
     icon: BarChart3,
-    title: "Search Console & Analytics",
-    desc: "Search Console doğrulama, sitemap gönderimi ve Analytics kurulumu. İlk günden itibaren ölçülebilir bir başlangıç.",
-  },
-  {
-    icon: MapPin,
-    title: "Yerel görünürlük için sayfa yapısı",
-    desc: "Yerel işletmelerin aranma sorgularına denk düşen, hizmet ve bölge odaklı sayfa kurgusu.",
+    title: "Search Console & Analytics kurulumu",
+    desc: "Search Console doğrulama, sitemap gönderimi ve Analytics bağlantısı. İlk günden itibaren ölçülebilir bir başlangıç.",
   },
   {
     icon: MessageSquare,
-    title: "Marka mesajını netleştirme",
-    desc: "Ne yaptığını ilk 5 saniyede anlatan, sade ve güven veren bir dil. Şişirme yok, satış odaklı netlik var.",
+    title: "Marka mesajının netleştirilmesi",
+    desc: "Ne yaptığını ilk anda anlatan, sade ve güven veren bir dil. Ziyaretçinin kafasında soru bırakmayan bir iletişim.",
   },
 ];
 
@@ -47,8 +42,9 @@ export function Services() {
           </Reveal>
           <Reveal delay={120} className="md:col-span-8">
             <p className="font-display text-2xl md:text-3xl leading-snug tracking-tight text-foreground/90 max-w-2xl">
-              Markalara sadece site kurmuyorum; bulunurluk için gereken temel
-              dijital altyapıyı baştan sona kuruyorum.
+              Sadece site kurmuyorum; markanın dijitalde bulunması, ölçülmesi
+              ve güven kurması için gereken temel altyapıyı baştan sona
+              hazırlıyorum.
             </p>
           </Reveal>
         </div>
