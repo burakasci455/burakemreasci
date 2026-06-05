@@ -10,7 +10,7 @@ export function Contact() {
         <Reveal className="md:col-span-4">
           <div className="flex items-baseline gap-4">
             <span className="font-display text-xs tracking-[0.3em] text-accent">
-              03
+              06
             </span>
             <h2 className="font-display text-sm tracking-[0.3em] uppercase text-muted-foreground">
               İletişim
