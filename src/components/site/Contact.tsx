@@ -20,8 +20,12 @@ export function Contact() {
 
         <Reveal delay={120} className="md:col-span-8">
           <p className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
-            Birlikte bir şey{" "}
-            <span className="italic text-accent">tasarlayalım</span>.
+            Markanı dijital dünyada doğru{" "}
+            <span className="italic text-accent">konumlandıralım</span>.
+          </p>
+          <p className="mt-6 font-body text-base md:text-lg text-muted-foreground max-w-xl">
+            Kısa bir mesaj at, projeni birlikte değerlendirelim. Genelde
+            24 saat içinde dönüyorum.
           </p>
 
           <div className="mt-14 space-y-6">
