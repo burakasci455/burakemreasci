@@ -2,20 +2,20 @@ import { Reveal } from "./Reveal";
 
 const points = [
   {
-    title: "Estetik + growth bakışı",
-    desc: "Site sadece güzel görünmesin diye değil, müşteri kazanma aracı olarak kurgulanıyor.",
+    title: "Estetik ve işlev birlikte",
+    desc: "Güzel görünen bir site yetmez. Tasarım, içeriği ön plana çıkaracak ve ziyaretçiyi yormayacak şekilde kurgulanır.",
   },
   {
-    title: "Yerel işletmenin ihtiyacını anlıyorum",
-    desc: "Yerel markaların gerçek sorunu görünür olmak ve güven vermek. Çözümleri buna göre tasarlıyorum.",
+    title: "Yerel işletmeyi anlıyorum",
+    desc: "Yerel markaların temel ihtiyacı görünür olmak ve güven vermek. Çözümleri bu iki başlığa göre tasarlıyorum.",
   },
   {
     title: "Hızlı ve net teknik kurulum",
-    desc: "Site, SEO temelleri ve ölçümleme tek elden ve kısa sürede ayağa kalkıyor.",
+    desc: "Site, SEO temelleri ve ölçümleme tek elden, kısa sürede ve sürpriz çıkarmadan ayağa kalkar.",
   },
   {
-    title: "Sade, çözüm odaklı iletişim",
-    desc: "Ajans dili yok. Ne yaptığımı, neden yaptığımı ve ne beklemen gerektiğini açık anlatıyorum.",
+    title: "Tek muhatap, sade iletişim",
+    desc: "Ajans katmanları yok. Ne yaptığımı, neden yaptığımı ve ne beklemen gerektiğini doğrudan ben anlatırım.",
   },
 ];
 
@@ -29,7 +29,7 @@ export function WhyMe() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 mb-16 md:mb-20">
           <Reveal className="md:col-span-4">
             <div className="flex items-baseline gap-4">
-              <span className="font-display text-xs tracking-[0.3em] text-accent">04</span>
+              <span className="font-display text-xs tracking-[0.3em] text-accent">05</span>
               <h2 className="font-display text-sm tracking-[0.3em] uppercase text-muted-foreground">
                 Neden Ben
               </h2>
