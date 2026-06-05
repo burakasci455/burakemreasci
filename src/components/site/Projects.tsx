@@ -6,6 +6,12 @@ import aboutImg from "@/assets/atelier/atelier-about.png.asset.json";
 import projectsImg from "@/assets/atelier/atelier-projects.png.asset.json";
 import portfolioImg from "@/assets/atelier/atelier-portfolio.png.asset.json";
 import workshopImg from "@/assets/atelier/atelier-workshop.png.asset.json";
+import ofHero from "@/assets/omerfaruk/of-hero.png.asset.json";
+import ofPortfolio from "@/assets/omerfaruk/of-portfolio.png.asset.json";
+import ofCourses from "@/assets/omerfaruk/of-courses-intro.png.asset.json";
+import ofAboutShort from "@/assets/omerfaruk/of-about-short.png.asset.json";
+import ofSchedule from "@/assets/omerfaruk/of-schedule.png.asset.json";
+import ofAbout from "@/assets/omerfaruk/of-about.png.asset.json";
 
 const atelierShots = [
   { src: heroImg.url, label: "Ana sayfa" },
@@ -13,6 +19,15 @@ const atelierShots = [
   { src: projectsImg.url, label: "Seçilmiş işler" },
   { src: portfolioImg.url, label: "Portföy" },
   { src: workshopImg.url, label: "Atölye" },
+];
+
+const omerFarukShots = [
+  { src: ofHero.url, label: "Ana sayfa" },
+  { src: ofPortfolio.url, label: "Portföy" },
+  { src: ofCourses.url, label: "Atölye & online kurslar" },
+  { src: ofSchedule.url, label: "Kurs takvimi" },
+  { src: ofAboutShort.url, label: "Hakkında — kısa" },
+  { src: ofAbout.url, label: "Hakkında — detay" },
 ];
 
 type Project = {
@@ -44,9 +59,17 @@ const projects: Project[] = [
   },
   {
     num: "02",
-    title: "",
-    sector: "Yakında",
-    year: "",
+    title: "Ömer Faruk Art",
+    sector: "Karakalem sanatçısı · Atölye & online kurslar",
+    year: "2026",
+    cover: ofHero.url,
+    shots: omerFarukShots,
+    problem:
+      "Sanatçının işleri ve atölye kursları tamamen Instagram'a sıkışmıştı. Potansiyel öğrenci kurs takvimini, içeriği veya sanatçının kim olduğunu net bir yerden göremiyordu.",
+    work:
+      "Editöryel bir tonda; eserler, kurslar, hakkında ve iletişim akışlarını ayıran bir kişisel marka sitesi kurguladım. Portföy galerisi, atölye & online kurs tanıtımı, kurs takvimi ve hakkında sayfalarını içerik öncelikli olarak tasarladım.",
+    impact:
+      "Sanatçının dijital vitrini artık tek bir yerde toplandı; eserler ciddi bir sunumla görünür, kurslar takvim üzerinden kayda dönüştürülebilir hale geldi.",
   },
   {
     num: "03",
@@ -55,6 +78,7 @@ const projects: Project[] = [
     year: "",
   },
 ];
+
 
 export function Projects() {
   const [active, setActive] = useState<Project | null>(null);
