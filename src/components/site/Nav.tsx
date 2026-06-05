@@ -34,18 +34,24 @@ export function Nav() {
         >
           BEA
         </a>
-        <ul className="flex items-center gap-7 md:gap-10">
+        <ul className="hidden md:flex items-center gap-7 lg:gap-10">
           {links.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
-                className="font-body text-xs md:text-sm tracking-wide text-muted-foreground hover:text-foreground transition-colors duration-300"
+                className="font-body text-xs lg:text-sm tracking-wide text-muted-foreground hover:text-foreground transition-colors duration-300"
               >
                 {l.label}
               </a>
             </li>
           ))}
         </ul>
+        <a
+          href="#iletisim"
+          className="md:hidden font-body text-xs tracking-wide text-accent hover:text-accent-glow"
+        >
+          İletişim
+        </a>
       </nav>
     </header>
   );
