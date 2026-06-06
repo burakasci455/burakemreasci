@@ -77,18 +77,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "BURAK EMRE ASCI" },
-      { name: "description", content: "Markalar için sade ve işlevsel kimlikler tasarlıyorum" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "BURAK EMRE ASCI" },
-      { property: "og:description", content: "Markalar için sade ve işlevsel kimlikler tasarlıyorum" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "BURAK EMRE ASCI" },
-      { name: "twitter:description", content: "Markalar için sade ve işlevsel kimlikler tasarlıyorum" },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/20687ce2-2452-4679-8041-506e20b4998e" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/20687ce2-2452-4679-8041-506e20b4998e" },
+      { property: "og:site_name", content: "Burak Emre Aşcı" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
