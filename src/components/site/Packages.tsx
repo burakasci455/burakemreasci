@@ -36,6 +36,7 @@ const setupPackages: Pkg[] = [
       "Kart tasarım + basım",
       "Sosyal medya butonları",
       "Logo tasarımı",
+      "Hızlı Destek",
     ],
   },
 ];
@@ -123,11 +124,7 @@ function Card({ pkg }: { pkg: Pkg }) {
 
       <a
         href={mailto(pkg.name)}
-        className={`relative mt-8 inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 font-display text-xs tracking-[0.25em] uppercase transition-all duration-500 ${
-          pkg.featured
-            ? "bg-accent text-accent-foreground hover:bg-accent-glow"
-            : "border border-border/60 text-foreground/90 hover:border-accent/60 hover:text-accent"
-        }`}
+        className="relative mt-8 inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 font-display text-xs tracking-[0.25em] uppercase transition-all duration-500 bg-accent text-accent-foreground hover:bg-accent-glow shadow-[0_0_20px_-5px_oklch(0.55_0.22_277_/_0.4)]"
       >
         Teklif Al
         <svg
