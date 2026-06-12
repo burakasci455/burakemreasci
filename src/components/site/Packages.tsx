@@ -14,6 +14,7 @@ const setupPackages: Pkg[] = [
       "Mobil uyumlu tasarım",
       "Google Haritalar kaydı",
       "Domain bağlantısı",
+      "Domain kurulumu + 1 yıl yayında kalma",
       "30 gün hata garantisi",
     ],
   },
@@ -25,6 +26,7 @@ const setupPackages: Pkg[] = [
       "Google'da görünürlük",
       "Ziyaretçi takip sistemi",
       "Arama takip kurulumu",
+      "Domain kurulumu + 1 yıl yayında kalma",
       "İçerik yazımı",
     ],
   },
@@ -35,6 +37,7 @@ const setupPackages: Pkg[] = [
       "NFC + QR yorum kartı",
       "Kart tasarım + basım",
       "Sosyal medya butonları",
+      "Domain kurulumu + 1 yıl yayında kalma",
       "Logo tasarımı",
       "Hızlı Destek",
     ],
@@ -71,6 +74,14 @@ function mailto(pkg: string) {
   const subject = encodeURIComponent(`Teklif talebi — ${pkg}`);
   const body = encodeURIComponent(
     `Merhaba Burak,\n\n"${pkg}" paketi için bir teklif almak istiyorum.\n\nMarka / iş: \nİhtiyacım: \nBütçe aralığı: \nİletişim: \n\nTeşekkürler.`,
+  );
+  return `mailto:${EMAIL}?subject=${subject}&body=${body}`;
+}
+
+function mailtoOptional() {
+  const subject = encodeURIComponent("Opsiyonel hizmetler teklifi");
+  const body = encodeURIComponent(
+    `Merhaba Burak,\n\nAşağıdaki opsiyonel hizmetler için teklif almak istiyorum:\n\n- İkinci Dil (İngilizce versiyon)\n- Online Randevu Sistemi Kurulumu\n- Ekstra Revizyon\n- Bakım Dışı Büyük Değişiklik\n- NFC + QR Yorum Kartı\n\nİhtiyacım olanlar: \n\nTeşekkürler.`,
   );
   return `mailto:${EMAIL}?subject=${subject}&body=${body}`;
 }
@@ -151,6 +162,84 @@ function Card({ pkg }: { pkg: Pkg }) {
   );
 }
 
+const optionalServices = [
+  "İkinci Dil (İngilizce versiyon)",
+  "Online Randevu Sistemi Kurulumu",
+  "Ekstra Revizyon",
+  "Bakım Dışı Büyük Değişiklik (yeni sayfa, tasarım değişikliği)",
+  "NFC + QR Yorum Kartı",
+];
+
+function OptionalServices() {
+  return (
+    <div className="mt-24 md:mt-32">
+      <Reveal>
+        <div className="flex items-baseline gap-4 mb-8">
+          <span className="font-display text-[11px] tracking-[0.3em] uppercase text-accent">
+            Ek Hizmetler
+          </span>
+          <span className="font-body text-xs text-muted-foreground">
+            İhtiyacınıza göre eklenebilir
+          </span>
+        </div>
+      </Reveal>
+
+      <Reveal delay={80}>
+        <h3 className="font-serif-title text-2xl md:text-[28px] tracking-tight text-foreground mb-8">
+          İhtiyacınıza Göre Ek Hizmetler
+        </h3>
+      </Reveal>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        {optionalServices.map((svc, i) => (
+          <Reveal key={svc} delay={i * 80}>
+            <div className="group rounded-xl border border-border/60 bg-surface/20 p-5 md:p-6 hover:border-accent/30 hover:bg-surface/40 transition-all duration-500 h-full flex items-start gap-3">
+              <span
+                aria-hidden
+                className="mt-[7px] h-1 w-1 rounded-full bg-accent/60 shrink-0"
+              />
+              <span className="font-body text-sm text-foreground/80 leading-relaxed">
+                {svc}
+              </span>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+
+      <Reveal delay={200}>
+        <div className="mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 rounded-xl border border-border/40 bg-surface/20 p-6 md:p-8">
+          <p className="font-body text-sm md:text-[15px] text-muted-foreground max-w-xl leading-relaxed">
+            Her işletmenin ihtiyacı farklıdır. Size özel fiyat ve çözümler
+            için iletişime geçin.
+          </p>
+          <a
+            href={mailtoOptional()}
+            className="inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 font-display text-xs tracking-[0.25em] uppercase transition-all duration-500 bg-accent text-accent-foreground hover:bg-accent-glow shadow-[0_0_20px_-5px_oklch(0.55_0.22_277_/_0.4)] shrink-0"
+          >
+            İletişime Geç
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              className="transition-transform duration-500 group-hover:translate-x-1"
+              aria-hidden
+            >
+              <path
+                d="M5 12h14M13 6l6 6-6 6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+      </Reveal>
+    </div>
+  );
+}
+
 export function Packages() {
   return (
     <section
@@ -197,6 +286,13 @@ export function Packages() {
           ))}
         </div>
 
+        <Reveal>
+          <p className="mt-6 font-body text-xs text-muted-foreground/70">
+            * 1 yıl sonrası yıllık domain yenileme ve barındırma ücreti
+            uygulanır.
+          </p>
+        </Reveal>
+
         <div className="mt-24 md:mt-32">
           <Reveal>
             <div className="flex items-baseline gap-4 mb-8">
@@ -217,7 +313,10 @@ export function Packages() {
             ))}
           </div>
         </div>
+
+        <OptionalServices />
       </div>
     </section>
   );
 }
+
