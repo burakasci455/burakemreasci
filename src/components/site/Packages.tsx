@@ -36,6 +36,7 @@ const setupPackages: Pkg[] = [
       "Kart tasarım + basım",
       "Sosyal medya butonları",
       "Logo tasarımı",
+      "Hızlı Destek",
     ],
   },
 ];
