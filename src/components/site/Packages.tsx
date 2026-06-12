@@ -95,9 +95,12 @@ function Card({ pkg }: { pkg: Pkg }) {
         />
       )}
       <div className="relative flex items-center justify-between">
-        <h3 className="font-display text-2xl md:text-[28px] tracking-tight text-foreground">
-          {pkg.name}
-        </h3>
+        <div>
+          <h3 className="font-serif-title text-3xl md:text-[34px] tracking-tight text-foreground">
+            {pkg.name}
+          </h3>
+          <div className="w-10 h-px bg-foreground/20 mt-3" />
+        </div>
         {pkg.featured && (
           <span className="font-display text-[10px] tracking-[0.25em] uppercase text-accent border border-accent/40 rounded-full px-2.5 py-1">
             En Popüler

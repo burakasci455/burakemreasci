@@ -82,6 +82,10 @@
   font-family: var(--font-body);
 }
 
+@utility font-serif-title {
+  font-family: "Playfair Display", ui-serif, Georgia, serif;
+}
+
 /* In-view reveal */
 @utility reveal {
   opacity: 0;
