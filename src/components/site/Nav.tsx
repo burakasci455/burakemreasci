@@ -4,6 +4,7 @@ const links = [
   { href: "#hizmetler", label: "Hizmetler" },
   { href: "#surec", label: "Süreç" },
   { href: "#projeler", label: "Projeler" },
+  { href: "#paketler", label: "Paketler" },
   { href: "#sss", label: "SSS" },
   { href: "#hakkimda", label: "Hakkımda" },
   { href: "#iletisim", label: "İletişim" },
