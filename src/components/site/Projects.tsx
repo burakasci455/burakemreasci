@@ -14,20 +14,20 @@ import ofSchedule from "@/assets/omerfaruk/of-schedule.png.asset.json";
 import ofAbout from "@/assets/omerfaruk/of-about.png.asset.json";
 
 const atelierShots = [
-  { src: heroImg.url, label: "Ana sayfa" },
-  { src: aboutImg.url, label: "Hakkımızda" },
-  { src: projectsImg.url, label: "Seçilmiş işler" },
-  { src: portfolioImg.url, label: "Portföy" },
-  { src: workshopImg.url, label: "Atölye" },
+  { src: heroImg.url, label: "Ana sayfa — Atelier Meşe iç mimarlık web sitesi tasarımı" },
+  { src: aboutImg.url, label: "Hakkımızda — Atelier Meşe iç mimarlık web sitesi tasarımı" },
+  { src: projectsImg.url, label: "Seçilmiş işler — Atelier Meşe iç mimarlık web sitesi tasarımı" },
+  { src: portfolioImg.url, label: "Portföy — Atelier Meşe iç mimarlık web sitesi tasarımı" },
+  { src: workshopImg.url, label: "Atölye — Atelier Meşe iç mimarlık web sitesi tasarımı" },
 ];
 
 const omerFarukShots = [
-  { src: ofHero.url, label: "Ana sayfa" },
-  { src: ofPortfolio.url, label: "Portföy" },
-  { src: ofCourses.url, label: "Atölye & online kurslar" },
-  { src: ofSchedule.url, label: "Kurs takvimi" },
-  { src: ofAboutShort.url, label: "Hakkında — kısa" },
-  { src: ofAbout.url, label: "Hakkında — detay" },
+  { src: ofHero.url, label: "Ana sayfa — Ömer Faruk Art karakalem sanatçısı web sitesi tasarımı" },
+  { src: ofPortfolio.url, label: "Portföy — Ömer Faruk Art karakalem sanatçısı web sitesi tasarımı" },
+  { src: ofCourses.url, label: "Atölye & online kurslar — Ömer Faruk Art web sitesi tasarımı" },
+  { src: ofSchedule.url, label: "Kurs takvimi — Ömer Faruk Art web sitesi tasarımı" },
+  { src: ofAboutShort.url, label: "Hakkında kısa — Ömer Faruk Art web sitesi tasarımı" },
+  { src: ofAbout.url, label: "Hakkında detay — Ömer Faruk Art web sitesi tasarımı" },
 ];
 
 type Project = {
@@ -125,7 +125,7 @@ export function Projects() {
                   {p.cover && (
                     <img
                       src={p.cover}
-                      alt={p.title}
+                      alt={`${p.title} — ${p.sector} web sitesi tasarımı`}
                       loading="lazy"
                       className="absolute inset-0 h-full w-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-700"
                     />

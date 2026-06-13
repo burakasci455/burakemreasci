@@ -45,7 +45,7 @@ const setupPackages: Pkg[] = [
 
 const carePackages: Pkg[] = [
   {
-    name: "Temel Bakım",
+    name: "Güvende Kal",
     features: [
       "Site çalışır durumda",
       "Ayda 1 güncelleme",
@@ -53,12 +53,12 @@ const carePackages: Pkg[] = [
     ],
   },
   {
-    name: "Standart Bakım",
+    name: "Gör & Yönet",
     featured: true,
     features: ["Temel Bakım +", "Ayda 2 güncelleme", "Ziyaretçi raporu"],
   },
   {
-    name: "Premium Bakım",
+    name: "Ultra",
     features: [
       "Standart Bakım +",
       "Görünürlük artırma",
