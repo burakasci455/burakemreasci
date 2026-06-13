@@ -35,7 +35,6 @@ const setupPackages: Pkg[] = [
     features: [
       "Profesyonel paketi +",
       "NFC + QR yorum kartı",
-      "Kart tasarım + basım",
       "Sosyal medya butonları",
       "Domain kurulumu + 1 yıl yayında kalma",
       "Logo tasarımı",
