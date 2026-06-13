@@ -47,21 +47,30 @@ const carePackages: Pkg[] = [
   {
     name: "Güvende Kal",
     features: [
-      "Site çalışır durumda",
-      "Ayda 1 güncelleme",
-      "Hata çözümü + yedek",
+      "Siteniz kesintisiz yayında ve güvenli",
+      "Düzenli yedekleme",
+      "Teknik hataların çözümü",
+      "Ayda 1 küçük güncelleme",
     ],
   },
   {
     name: "Gör & Yönet",
     featured: true,
-    features: ["Temel Bakım +", "Ayda 2 güncelleme", "Ziyaretçi raporu"],
+    features: [
+      "Güvende Kal'ın tüm kapsamı",
+      "Ayda 2 içerik/görsel güncellemesi",
+      "Aylık ziyaretçi raporu",
+      "Google işletme profilinizin takibi ve yönetimi",
+      "Yorumların düzenli yanıtlanması",
+    ],
   },
   {
     name: "Ultra",
     features: [
-      "Standart Bakım +",
-      "Görünürlük artırma",
+      "Gör & Yönet'in tüm kapsamı",
+      "Aktif yerel SEO yönetimi ve sıralama takibi",
+      "Online randevu sistemi dahil (kurulum ücreti yok)",
+      "Aylık performans raporu: görünürlük, ulaşan müşteri sayısı",
       "Acil müdahale önceliği",
     ],
   },

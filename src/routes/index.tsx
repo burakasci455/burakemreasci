@@ -61,6 +61,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
+      { name: "twitter:url", content: SITE_URL },
     ],
     links: [{ rel: "canonical", href: SITE_URL }],
     scripts: [
