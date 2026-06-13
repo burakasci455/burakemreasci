@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://burakemreasci.lovable.app/sitemap.xml
+Sitemap: https://www.burakemreasci.com/sitemap.xml
