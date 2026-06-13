@@ -296,7 +296,7 @@ export function Packages() {
           <Reveal>
             <div className="flex items-baseline gap-4 mb-8">
               <span className="font-display text-[11px] tracking-[0.3em] uppercase text-accent">
-                Aylık Bakım
+                Aylık Plan
               </span>
               <span className="font-body text-xs text-muted-foreground">
                 Opsiyonel — istediğin zaman iptal
