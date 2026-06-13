@@ -12,7 +12,7 @@ import { About } from "@/components/site/About";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 
-const SITE_URL = "https://burakemreasci.lovable.app";
+const SITE_URL = "https://www.burakemreasci.com";
 const TITLE =
   "Burak Emre Aşcı — Web Sitesi, Temel SEO & Dijital Görünürlük";
 const DESCRIPTION =
@@ -93,6 +93,30 @@ export const Route = createFileRoute("/")({
             "@type": "PostalAddress",
             addressLocality: "Sakarya / İstanbul",
             addressCountry: "TR",
+          },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: "Burak Emre Aşcı — Web Tasarım & SEO",
+          url: SITE_URL,
+          areaServed: [
+            { "@type": "City", name: "Sakarya" },
+            { "@type": "City", name: "İstanbul" },
+          ],
+          provider: { "@type": "Person", name: "Burak Emre Aşcı" },
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Hizmetler",
+            itemListElement: [
+              { "@type": "Offer", itemOffered: { "@type": "Service", name: "Web sitesi tasarımı" } },
+              { "@type": "Offer", itemOffered: { "@type": "Service", name: "Temel SEO" } },
+              { "@type": "Offer", itemOffered: { "@type": "Service", name: "Search Console kurulumu" } },
+              { "@type": "Offer", itemOffered: { "@type": "Service", name: "Analytics kurulumu" } },
+            ],
           },
         }),
       },
